@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VasSdkDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="onw-V7-9Rn">
+                                <frame key="frameInset" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueP-AD-60d">
+                                <frame key="frameInset" minX="270" minY="285" width="60" height="30"/>
+                                <state key="normal" title="启动SDK"/>
+                                <connections>
+                                    <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ghy-Ma-bKP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBH-3R-Tm6">
+                                <frame key="frameInset" minX="270" minY="323" width="60" height="30"/>
+                                <state key="normal" title="清除缓存"/>
+                                <connections>
+                                    <action selector="onClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uxq-lH-SsO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJW-lN-ri5">
+                                <frame key="frameInset" minY="361" width="600" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="7YL-Vi-FdZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hD-bx-ijT">
+                                <frame key="frameInset" minX="285" minY="390" width="30" height="30"/>
+                                <state key="normal" title="购买"/>
+                                <connections>
+                                    <action selector="onBuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OM5-vk-h84"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX4-lX-S8Z">
+                                <frame key="frameInset" minX="270" minY="416" width="60" height="30"/>
+                                <state key="normal" title="清除购买"/>
+                                <connections>
+                                    <action selector="onClearBuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rWI-eA-ay1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fn-2h-QwR">
+                                <frame key="frameInset" minX="263" minY="454" width="75" height="30"/>
+                                <state key="normal" title="初始化购买"/>
+                                <connections>
+                                    <action selector="initBuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcF-Zu-4b1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6hD-bx-ijT" firstAttribute="top" secondItem="XJW-lN-ri5" secondAttribute="bottom" constant="8" symbolic="YES" id="0ZW-zh-M20"/>
+                            <constraint firstItem="uX4-lX-S8Z" firstAttribute="leading" secondItem="dBH-3R-Tm6" secondAttribute="leading" id="268-HT-dph"/>
+                            <constraint firstItem="onw-V7-9Rn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7h1-Y0-xxJ"/>
+                            <constraint firstItem="ueP-AD-60d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7rX-e0-XIU"/>
+                            <constraint firstItem="onw-V7-9Rn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="8Mn-ca-tWt"/>
+                            <constraint firstItem="XJW-lN-ri5" firstAttribute="centerX" secondItem="dBH-3R-Tm6" secondAttribute="centerX" id="9Hy-n0-3OZ"/>
+                            <constraint firstItem="onw-V7-9Rn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AAM-ba-z4D"/>
+                            <constraint firstItem="onw-V7-9Rn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ECU-FA-xir"/>
+                            <constraint firstItem="6hD-bx-ijT" firstAttribute="centerX" secondItem="XJW-lN-ri5" secondAttribute="centerX" id="EDT-Sx-9ly"/>
+                            <constraint firstItem="2Fn-2h-QwR" firstAttribute="centerX" secondItem="uX4-lX-S8Z" secondAttribute="centerX" id="Tli-Gt-h4b"/>
+                            <constraint firstItem="uX4-lX-S8Z" firstAttribute="top" secondItem="XJW-lN-ri5" secondAttribute="bottom" constant="34" id="VEL-Qb-fba"/>
+                            <constraint firstItem="2Fn-2h-QwR" firstAttribute="top" secondItem="uX4-lX-S8Z" secondAttribute="bottom" constant="8" symbolic="YES" id="age-Z9-VIX"/>
+                            <constraint firstItem="dBH-3R-Tm6" firstAttribute="top" secondItem="ueP-AD-60d" secondAttribute="bottom" constant="8" symbolic="YES" id="hES-Rz-JhO"/>
+                            <constraint firstItem="dBH-3R-Tm6" firstAttribute="leading" secondItem="ueP-AD-60d" secondAttribute="leading" id="rPn-ER-PFl"/>
+                            <constraint firstItem="ueP-AD-60d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wqO-P6-cBe"/>
+                            <constraint firstItem="XJW-lN-ri5" firstAttribute="top" secondItem="dBH-3R-Tm6" secondAttribute="bottom" constant="8" symbolic="YES" id="xHx-M2-Pk4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iV" destination="onw-V7-9Rn" id="WV5-0h-UMt"/>
+                        <outlet property="uuidL" destination="XJW-lN-ri5" id="EgW-Kr-5QA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="430" y="436"/>
+        </scene>
+    </scenes>
+</document>
