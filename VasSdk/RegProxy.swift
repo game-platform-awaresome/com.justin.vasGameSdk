@@ -75,7 +75,7 @@ class RegProxy: NSObject
             + "&index=" + ind
             + "&token=" + token
             + "&app=" + Common.APP;
-        
+        print(postStr);
         NetProxy.sharedInstance.requestDataByPost(NetCommon.PHONE_CODE_URL, postStr: postStr, onComplete: onRequestPhoneCodeBack);
     }
     
