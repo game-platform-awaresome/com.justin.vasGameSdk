@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hAF-im-BYv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="N6S-mi-ZvK">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="17G-qM-uh1" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target"/>
@@ -543,7 +543,7 @@
                         <viewControllerLayoutGuide type="bottom" id="OVv-1D-p9d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="906-Zy-tia">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zHm-na-w8a" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target"/>
@@ -1222,7 +1222,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jJU-mm-sPi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bJ1-Z4-buL">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="szL-zj-4RP" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target"/>
@@ -1602,7 +1602,7 @@
                         <viewControllerLayoutGuide type="bottom" id="l8K-5q-GlJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="apD-Hq-fas">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jEn-Ea-iwy" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target"/>
@@ -1654,11 +1654,9 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PzZ-qy-aBc">
-                                        <frame key="frameInset" minX="24" minY="152" width="302" height="100"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzZ-qy-aBc">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUT-OB-zjU">
-                                                <frame key="frameInset" minX="234" width="68" height="100"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUT-OB-zjU">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="FVp-cn-hrV"/>
                                                     <constraint firstAttribute="width" constant="66" id="ppZ-ze-Apb">
@@ -1675,8 +1673,7 @@
                                                     <action selector="onGcClick:" destination="DC2-SI-eGb" eventType="touchUpInside" id="jzQ-84-Mlv"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zZ-hm-fhx">
-                                                <frame key="frameInset" minX="156" width="66" height="100"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zZ-hm-fhx">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="e4Q-Oe-6bY"/>
                                                     <constraint firstAttribute="width" constant="66" id="vEJ-6N-pik"/>
@@ -1691,8 +1688,7 @@
                                                     <segue destination="oA6-zG-R2z" kind="show" id="rXg-ip-Kzo"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj4-Fu-07R">
-                                                <frame key="frameInset" minX="78" width="66" height="100"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj4-Fu-07R">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="66" id="ZjB-1X-JYb"/>
                                                     <constraint firstAttribute="height" constant="100" id="dJr-FB-Hul"/>
@@ -1707,8 +1703,7 @@
                                                     <action selector="onQuickGameClick:" destination="DC2-SI-eGb" eventType="touchUpInside" id="883-XQ-Sbl"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx9-sQ-3Do">
-                                                <frame key="frameInset" width="66" height="100"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx9-sQ-3Do">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="nb2-Sq-nLv"/>
                                                     <constraint firstAttribute="width" constant="66" id="uTz-WU-czT"/>
@@ -2122,7 +2117,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5BX-1A-1YA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6o5-Ug-jfp">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sIR-0N-FEV" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target"/>
@@ -2657,7 +2652,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XwJ-cp-Ji6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mhe-zn-nwN">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NT2-nm-CSp" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target"/>
@@ -3193,7 +3188,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HOw-wP-cqZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kej-Df-LWj">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AdL-cW-N0a" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target"/>
@@ -3671,7 +3666,7 @@
                         <viewControllerLayoutGuide type="bottom" id="b4G-xo-FgV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KYt-fu-YXK">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TJo-Lq-xwY" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target"/>
@@ -4149,7 +4144,7 @@
                         <viewControllerLayoutGuide type="bottom" id="G6e-R9-KOV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RvK-mQ-T3H">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jc7-kR-5Te" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target"/>
@@ -4589,7 +4584,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Mfb-Wc-HBp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k4U-HK-ZRE">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -4638,7 +4633,7 @@
                         <viewControllerLayoutGuide type="bottom" id="joo-uA-UW5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="amX-L2-1E2">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -4670,7 +4665,7 @@
                         <viewControllerLayoutGuide type="bottom" id="opo-Ca-CZN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5qI-wr-6nK">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vsd-1F-5LS" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target"/>
@@ -5217,20 +5212,20 @@
                         <viewControllerLayoutGuide type="bottom" id="HN6-nl-EO5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gFJ-bP-CkH">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OZI-vg-9sT" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target"/>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9Q-mI-mRo">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w9Q-mI-mRo">
                                 <frame key="frameInset" minX="34" minY="235" width="480" height="300"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-lr-zD1">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-lr-zD1">
                                         <frame key="frameInset" minX="8" minY="8" width="46" height="22"/>
                                         <state key="normal" title="返回" image="icon_back">
                                             <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OT8-Sr-neO">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OT8-Sr-neO">
                                         <frame key="frameInset" minX="88" minY="18" width="1" height="264"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="264" id="2Q5-xK-U4f"/>
@@ -5259,7 +5254,7 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYW-Ix-0UL">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYW-Ix-0UL">
                                         <frame key="frameInset" minX="39" minY="76" width="560" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Cy8-9g-wbM"/>
@@ -5280,7 +5275,7 @@
                                             <outlet property="delegate" destination="stw-bc-1Bv" id="hFQ-Lr-OgF"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="重复密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5uR-GJ-X66">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="重复密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5uR-GJ-X66">
                                         <frame key="frameInset" minX="39" minY="114" width="560" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -5288,7 +5283,7 @@
                                             <outlet property="delegate" destination="stw-bc-1Bv" id="aMV-hu-RNt"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOP-ej-PDB">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOP-ej-PDB">
                                         <frame key="frameInset" minX="39" minY="38" width="560" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="DkE-Po-2wr"/>
@@ -5309,7 +5304,7 @@
                                             <outlet property="delegate" destination="stw-bc-1Bv" id="kxt-Fn-ZN2"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEV-Pv-6Ey" customClass="ColorButton" customModule="VasSdk" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEV-Pv-6Ey" customClass="ColorButton" customModule="VasSdk" customModuleProvider="target">
                                         <frame key="frameInset" minX="279" minY="178" width="81" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="81" id="6oQ-0j-lsK"/>
@@ -5335,7 +5330,7 @@
                                             <action selector="onSubmit:" destination="stw-bc-1Bv" eventType="touchUpInside" id="eYx-C2-gFI"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="logo_y" translatesAutoresizingMaskIntoConstraints="NO" id="t3o-Yi-hDK">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo_y" translatesAutoresizingMaskIntoConstraints="NO" id="t3o-Yi-hDK">
                                         <frame key="frameInset" minX="8" minY="103" width="72" height="94"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="72" id="WHf-0i-pVt"/>
@@ -5558,7 +5553,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QKY-SI-3l5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="POd-27-POf">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rXw-5W-XUH" customClass="BgImageView" customModule="VasSdk" customModuleProvider="target">
@@ -6134,20 +6129,20 @@ Cookies
     <resources>
         <image name="check_box_c" width="14" height="14"/>
         <image name="check_box_n" width="14" height="14"/>
-        <image name="icon_back" width="10" height="18"/>
+        <image name="icon_back" width="10" height="17"/>
         <image name="icon_del" width="10" height="10"/>
-        <image name="icon_forget" width="17" height="17"/>
-        <image name="icon_gc" width="68" height="68"/>
+        <image name="icon_forget" width="16" height="16"/>
+        <image name="icon_gc" width="66" height="66"/>
         <image name="icon_more" width="13" height="8"/>
-        <image name="icon_other" width="18" height="18"/>
-        <image name="icon_phone" width="68" height="68"/>
-        <image name="icon_play" width="68" height="68"/>
-        <image name="icon_pptv" width="68" height="68"/>
-        <image name="icon_register" width="17" height="17"/>
+        <image name="icon_other" width="18" height="17"/>
+        <image name="icon_phone" width="66" height="66"/>
+        <image name="icon_play" width="66" height="66"/>
+        <image name="icon_pptv" width="66" height="66"/>
+        <image name="icon_register" width="16" height="16"/>
         <image name="line_x" width="1" height="1"/>
         <image name="line_y" width="1" height="1"/>
-        <image name="logo_x" width="145" height="38"/>
-        <image name="logo_y" width="79" height="96"/>
+        <image name="logo_x" width="141" height="37"/>
+        <image name="logo_y" width="78" height="94"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8NJ-f6-FgC"/>
