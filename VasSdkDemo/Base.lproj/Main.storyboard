@@ -19,25 +19,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="onw-V7-9Rn">
-                                <frame key="frameInset" width="600" height="600"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueP-AD-60d">
-                                <frame key="frameInset" minX="270" minY="285" width="60" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="onw-V7-9Rn"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueP-AD-60d">
                                 <state key="normal" title="启动SDK"/>
-                                <connections>
-                                    <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ghy-Ma-bKP"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBH-3R-Tm6">
-                                <frame key="frameInset" minX="270" minY="323" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBH-3R-Tm6">
                                 <state key="normal" title="清除缓存"/>
                                 <connections>
-                                    <action selector="onClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uxq-lH-SsO"/>
+                                    <action selector="onClearSdk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="84q-uX-yCf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJW-lN-ri5">
-                                <frame key="frameInset" minY="361" width="600" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJW-lN-ri5">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="7YL-Vi-FdZ"/>
                                 </constraints>
@@ -45,25 +37,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hD-bx-ijT">
-                                <frame key="frameInset" minX="285" minY="390" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hD-bx-ijT">
                                 <state key="normal" title="购买"/>
                                 <connections>
-                                    <action selector="onBuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OM5-vk-h84"/>
+                                    <action selector="onClickBuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x4X-rj-aQc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX4-lX-S8Z">
-                                <frame key="frameInset" minX="270" minY="416" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX4-lX-S8Z">
                                 <state key="normal" title="清除购买"/>
-                                <connections>
-                                    <action selector="onClearBuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rWI-eA-ay1"/>
-                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fn-2h-QwR">
-                                <frame key="frameInset" minX="263" minY="454" width="75" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fn-2h-QwR">
                                 <state key="normal" title="初始化购买"/>
                                 <connections>
-                                    <action selector="initBuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcF-Zu-4b1"/>
+                                    <action selector="onInitBuy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9yK-T3-Pva"/>
                                 </connections>
                             </button>
                         </subviews>

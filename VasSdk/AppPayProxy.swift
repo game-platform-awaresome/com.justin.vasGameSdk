@@ -9,6 +9,14 @@
 import UIKit
 import StoreKit
 
+import VasSdkTool
+
+//10.200.64.140 1080
+//账号：
+//hdcq01@qq.com
+//密码：
+//Aa@123456
+
 class AppPayProxy: NSObject, SKPaymentTransactionObserver, SKProductsRequestDelegate
 {
     static let REQUEST_PRODUCT:String = "request_product";
@@ -34,6 +42,10 @@ class AppPayProxy: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
     
     let VERIFY_RECEIPT_URL = "https://buy.itunes.apple.com/verifyReceipt";
     let ITMS_SANDBOX_VERIFY_RECEIPT_URL = "https://sandbox.itunes.apple.com/verifyReceipt";
+    
+    let SERVICE_VERIFY_URL = "http://pay.vas.pptv.com/api/iap/check.php?";
+    
+    let VERIFY_KEY = "76tSFFEEQ~!KH";
     
     var productDic:NSMutableDictionary!;
     
@@ -145,6 +157,8 @@ class AppPayProxy: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
     // 点击购买产品后触发的
     func onSelectRechargePackages(productId: String)
     {
+//        print("buy:", productId);
+        
         //先判断是否支持内购
         if(SKPaymentQueue.canMakePayments())
         {
@@ -160,6 +174,8 @@ class AppPayProxy: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
     // 购买对应的产品
     func buyProduct(product: SKProduct)
     {
+//        print("\(product)");
+        
         let payment = SKPayment(product: product);
         SKPaymentQueue.defaultQueue().addPayment(payment);
         
@@ -178,7 +194,8 @@ class AppPayProxy: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
                 // 更新界面或者数据，把用户购买得商品交给用户
                 print("支付成了");
                 // 验证购买凭据
-                self.verifyPruchase(transaction);
+//                self.verifyPruchase(transaction);
+                verifyPruchaseByServer(transaction);
 //                transaction.payment
                 // 将交易从交易队列中删除
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction);
@@ -211,6 +228,79 @@ class AppPayProxy: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction);
             }
         }
+    }
+    
+    func verifyPruchaseByServer(transaction:SKPaymentTransaction)
+    {
+        // 验证凭据，获取到苹果返回的交易凭据
+        // appStoreReceiptURL iOS7.0增加的，购买交易完成后，会将凭据存放在该地址
+        let receiptURL:NSURL = NSBundle.mainBundle().appStoreReceiptURL!;
+        // 从沙盒中获取到购买凭据
+        let receiptData = NSData(contentsOfURL: receiptURL);
+//        receiptData?.description
+        
+//        let receiptDataStr = String(data: transaction!, encoding:NSUTF8StringEncoding);
+//        print(receiptDataStr)
+//        let receiptDataStr = try! String(contentsOfURL: receiptURL!);
+//        print(receiptDataStr)
+        
+                // 在网络中传输数据，大多情况下是传输的字符串而不是二进制数据
+        // 传输的是BASE64编码的字符串
+        /**
+         BASE64 常用的编码方案，通常用于数据传输，以及加密算法的基础算法，传输过程中能够保证数据传输的稳定性
+         BASE64是可以编码和解码的
+         */
+        let encodeReceiptStr = receiptData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithLineFeed);
+        
+        let uName = UserProxy.sharedInstance.userName!;
+        let gid = Common.EXT_GID;
+        
+        let tmD = NSDate().timeIntervalSince1970*1000;
+        let tmI = Int64(tmD);
+        let tm = String(stringInterpolationSegment: tmI);
+        
+        let key = VERIFY_KEY;
+        
+        let signStr = gid + uName + tm + key;
+        let sign = getSign(signStr);
+        
+//        let productId = transaction.payment.productIdentifier;
+//        
+//        if(productDic == nil)
+//        {
+//            return;
+//        }
+//        
+//        let product = productDic[productId] as! SKProduct;
+//        let cost = product.price.description;
+        
+        let transactionId = transaction.transactionIdentifier!;
+        let transactionIdSign = getSign(transactionId + key);
+        
+        let postStr:String = "tm=" + tm
+        + "&iapid=" +  encodeReceiptStr!
+        + "&appid=mobile"
+        + "&username=" +  uName
+        + "&gid=" +  gid
+        + "&sign=" +  sign
+        + "&sid=1"
+        + "&transactionid=" +  transactionIdSign;
+        
+//        + "&iapcost=" +  cost
+        
+        print("verifyPruchase post str:",postStr);
+        
+        NetProxy.sharedInstance.requestDataByPost(SERVICE_VERIFY_URL, postStr: postStr, onComplete: onRequestVerifyBack);
+    }
+    
+    func onRequestVerifyBack(data:NSData?, response:NSURLResponse?, error:NSError?) -> Void
+    {
+
+    }
+    
+    func getSign(str:String)->String
+    {
+        return ThreeDES.md5(str);
     }
     
     func verifyPruchase(transaction:SKPaymentTransaction)
