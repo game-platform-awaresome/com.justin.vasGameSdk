@@ -20,7 +20,7 @@ class UserProxy: NSObject
     static let REQUEST_RAISE_GUEST_EVENT:String = "request_raise_guest_event";
     static let REQUEST_RAISE_GUEST_BACK_EVENT:String = "request_raise_guest_back_event";
     
-    var userName:String?;
+    var userName:String? = "vst007";
     var loginName:String?;
     var bindName:String?;
     var showName:String?;

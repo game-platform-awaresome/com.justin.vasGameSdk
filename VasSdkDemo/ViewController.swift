@@ -37,6 +37,15 @@ class ViewController: UIViewController {
         uuid = userDefaults.stringForKey("uuid");
         
         uuidL.text = uuid;
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.onSdkProduct(_:)), name: SDKMain.APPLE_PRODUCT_INFO_BACK , object: nil);
+    }
+    
+    func onSdkProduct(n:NSNotification)
+    {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: SDKMain.APPLE_PRODUCT_INFO_BACK , object: nil);
+        
+        print("apple product info: \(n.userInfo!)");
     }
 
     override func didReceiveMemoryWarning()
@@ -44,9 +53,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func onClear(sender: AnyObject)
-    {
+    @IBAction func onClearSdk(sender: AnyObject) {
         let userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults();
         
         userDefaults.removeObjectForKey("userDicArr");
@@ -56,7 +63,7 @@ class ViewController: UIViewController {
         
         SDKMain.clearSDK();
         
-        SDKMain.initSDK("msxq_m");
+        SDKMain.initSDK("hdcq_m");
         
         uuid = userDefaults.stringForKey("uuid");
         
@@ -65,7 +72,7 @@ class ViewController: UIViewController {
 
     @IBAction func onClick(sender: AnyObject)
     {
-        SDKMain.initSDK("msxq_m", shouldAutorotate: true, supportedInterfaceOrientations: UIInterfaceOrientationMask.All);
+        SDKMain.initSDK("hdcq_m", shouldAutorotate: true, supportedInterfaceOrientations: UIInterfaceOrientationMask.All);
         
         SDKMain.strartFirstUi(self);
         
@@ -81,17 +88,21 @@ class ViewController: UIViewController {
         print("sdk close, stat: \(n.userInfo!)");
     }
     
-    @IBAction func onBuy(sender: AnyObject)
-    {
-        SDKMain.startApplePay(["com.pptv.vas.game.30y","com.pptv.vas.game.6y"], ifDisWin: true, parentVc: self);
-    }
     @IBAction func onClearBuy(sender: AnyObject)
     {
         SDKMain.stopApplePay();
     }
-    @IBAction func initBuy(sender: AnyObject)
+    
+    @IBAction func onClickBuy(sender: AnyObject)
     {
-//        SDKMain.initApplePay();
+        SDKMain.buyAppleProduct("cn.codegame.pptvhdwg.200109");
+    }
+    
+    @IBAction func onInitBuy(sender: AnyObject)
+    {
+        SDKMain.initSDK("hdcq_m", shouldAutorotate: true, supportedInterfaceOrientations: UIInterfaceOrientationMask.All);
+        
+        SDKMain.startApplePay(["cn.codegame.pptvhdwg.200109","cn.codegame.pptvhdwg.200108","cn.codegame.pptvhdwg.200006"], ifDisWin: false, parentVc: self);
+
     }
 }
-

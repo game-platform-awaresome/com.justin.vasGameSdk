@@ -27,6 +27,18 @@ public class SDKMain: NSObject
     
     var startVc:UIViewController?;
     
+    
+    /// Description
+    ///
+    /// - parameter gid:                            gid description
+    /// - parameter shouldAutorotate:               shouldAutorotate description
+    /// - parameter supportedInterfaceOrientations: supportedInterfaceOrientations description
+    /// - parameter puid:                           puid description
+    /// - parameter cid:                            cid description
+    /// - parameter chid:                           chid description
+    /// - parameter ccid:                           ccid description
+    ///
+    /// - returns: return value description
     public static func initSDK(gid:String = "demo", shouldAutorotate:Bool = true, supportedInterfaceOrientations:UIInterfaceOrientationMask = UIInterfaceOrientationMask.All, puid:String = "", cid:String = "demo", chid:String = "demo", ccid:String = "demo")
     {
 //        LoginProxy.sharedInstance.startWork();
@@ -313,6 +325,8 @@ public class SDKMain: NSObject
     
     public static func buyAppleProduct(id:String)
     {
+//        print("prepare buy:", id);
+        
         NSNotificationCenter.defaultCenter().postNotificationName(AppPayProxy.REQUEST_BUY_PRODUCT, object: nil, userInfo: ["productId":id]);
     }
     
