@@ -275,7 +275,7 @@ class AppPayProxy: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
 //        let cost = product.price.description;
         
         let transactionId = transaction.transactionIdentifier!;
-        let transactionIdSign = getSign(transactionId + key);
+//        let transactionIdSign = getSign(transactionId + key);
         
         let postStr:String = "tm=" + tm
         + "&iapid=" +  encodeReceiptStr!
@@ -284,7 +284,7 @@ class AppPayProxy: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
         + "&gid=" +  gid
         + "&sign=" +  sign
         + "&sid=1"
-        + "&transactionid=" +  transactionIdSign;
+        + "&transactionid=" +  transactionId;
         
 //        + "&iapcost=" +  cost
         
